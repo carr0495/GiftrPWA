@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People</title>
+    <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" href="/css/styles.css" rel="stylesheet">
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <link rel="manifest" href="/manifest.json">
+   <!-- ios support -->
+   <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+   <meta name="apple-mobile-web-status-bar" content="#aa7700">
+
+</head>
+<body class="blue-grey darken-4">
+    <div class="navbar-fixed ">
+        <nav>
+            <div class="nav-wrapper blue-grey darken-3">
+                <a href="#!" class="brand-logo">Giftr</a>
+                <a  id="LogoutButton" class="waves-effect waves-light btn right">Logout</a>
+            </div>
+        </nav>
+    </div>
+    
+    <ul class="collection" id="mainList">
+      
+      </ul>
+      <template id='personListTemplate'>
+        <li class="collection-item avatar">
+          <img src="https://www.placecage.com/200/300" alt="" class="circle">
+          <span id="fullName" class="title">First and Last Name</span>
+          <p>Gifts:<span id="giftBadge" class="badge"></span><br>
+             
+          </p>
+          <p id="personBirthDay">birthday</p>
+          <div class="collection">
+          <a href="#" id="addGiftButton" data-gift-person="" class="collection-item s1 right"><i id="addGiftIcon" data-gift-person="" class="material-icons">add</i></a>
+          <a href="#" data-del-id="" id="personDelButton" class="collection-item s1 left"><i id="delIcon" data-del-id="" class="material-icons">delete</i></a>
+        </div>
+        </li>
+      </template>
+
+       <!-- Modal Trigger -->
+
+  <!-- Modal Structure -->
+  
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Add a person</h4>
+      <p>enter a name and birthday</p>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input value="John" id="first_name" type="text" class="validate">
+        <label class="active" for="first_name">First Name</label>
+      </div>
+      <div class="input-field col s6">
+        <input value="Smith" id="last_name" type="text" class="validate">
+        <label class="active" for="last_name">Last Name</label>
+      </div>
+    </div>
+    <label class="active" for="date">Birthday</label>
+    <input type="text" class="datepicker" id="date">
+    <div class="modal-footer">
+      <a href="#!" id="addPersonButton" class="modal-close waves-effect waves-green btn-flat">Add</a>
+    </div>
+  </div>
+
+
+      <div class="fixed-action-btn">
+        <a class="btn-floating btn-large teal lighten-2 waves-effect waves-light btn modal-trigger" href="#modal1">
+          <i class="large material-icons">add</i>
+        </a>
+      </div>
+      <script src="/js/ui.js"></script>
+      <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gifts</title>
+    <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" href="/css/styles.css" rel="stylesheet">
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <link rel="manifest" href="/manifest.json">
+   <!-- ios support -->
+   <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+   <meta name="apple-mobile-web-status-bar" content="#aa7700">
+
+</head>
+<body class="blue-grey darken-4">
+    <div class="navbar-fixed ">
+        <nav>
+            <div class="nav-wrapper blue-grey darken-3">
+                <a href="#!" id="logoBack" class="waves-effect waves-light btn">Back</a>
+                <a id="LogoutButton" class="waves-effect waves-light btn right">Logout</a>
+              </div>
+        </nav>
+    </div>
+    <!-- container for list -->
+    <ul class="collection" id="mainList">
+      
+      </ul>
+
+      <template id="giftItemTemplate">
+        <li class="collection-item avatar">
+          <img src="https://picsum.photos/id/1/200/300" alt="" class="circle">
+          <span id="GiftName" class="title">Gift Name</span>
+          <p id="giftPrice">Gift Price <br>
+             
+          </p>
+          <div class="collection">
+          <a id="giftLink" href="" class="collection-item s1 right"><i class="material-icons">link</i></a>
+          <a id="deleteGift" data-gift-id="" href="" class="collection-item s1 left"><i id="delIcon" data-gift-id="" class="material-icons">delete</i></a>
+
+        </div>
+        </li>
+      </template>
+
+       <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Add a gift</h4>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input value="" id="gift_name" type="text" class="validate">
+        <label class="active" for="gift_name">Gift Name</label>
+      </div>
+      <div class="input-field col s12">
+        <input value="" id="gift_price" type="text" class="validate">
+        <label class="active" for="gift_price">Price</label>
+      </div>
+      <div class="input-field col s12">
+        <input value="" id="gift_url" type="text" class="validate">
+        <label class="active" for="gift_url">link</label>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat" id="addGiftButton">Add</a>
+    </div>
+  </div>
+
+
+    <!-- Fab at bottom -->
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large teal lighten-2 waves-effect waves-light btn modal-trigger" href="#modal1">
+        <i class="large material-icons">add</i>
+      </a>
+    </div>
+      <script src="/js/ui.js"></script>
+      <script src="/js/main.js"></script>
+</body>
+</html>

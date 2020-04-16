@@ -1,0 +1,21 @@
+#LoginButton, #RegisterButton{
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+}
+
+.datepicker{
+    transform: scale(0.7);
+  }
+
+  .hidden{
+      display:none;
+  }
+
+  #LogoutButton{
+      margin: 10px;
+  }
+
+  #logoBack{
+      margin-left: 10px;
+  }
